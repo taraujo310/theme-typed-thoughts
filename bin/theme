@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+# `echo $NVM_DIR`
+# puts "#{$-NVM_DIR}"
+# nvm = `#{$NVM_DIR}/nvm use 20`
+
+tailwind_thread = Thread.new do
+  puts "running tailwind"
+  pid = `npx tailwind -i ./assets/css/main.css -o ./assets/css/style.css --watch`
+  puts "tailwind: #{pid}"
+end
+
+jekyll_thread = Thread.new do
+  puts "running jekyll"
+  pid = `jekyll serve`
+  puts "jekyll #{pid}"
+end
+
+
+
+[tailwind_thread, jekyll_thread].each { |t| t.join }
