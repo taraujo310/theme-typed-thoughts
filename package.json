@@ -4,7 +4,9 @@
   "description": "Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.",
   "main": "postcss.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "t": "npx tailwind -i ./assets/css/main.css -o ./assets/css/style.css",
+    "jekyll-serve": "jekyll-serve",
+    "start": "jekyll serve && npm run tailwind-watcher"
   },
   "author": "",
   "license": "ISC",

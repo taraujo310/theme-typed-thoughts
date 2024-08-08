@@ -1,0 +1,49 @@
+---
+#
+# By default, content added below the "---" mark will appear in the home page
+# between the top bar and the list of recent posts.
+# To change the home page layout, edit the _layouts/home.html file.
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+#
+layout: base
+---
+
+<div class="">
+  <h1 class="text-3xl font-bold mb-5">Elements</h1>
+  <div class="card bg-white p-4 mb-6 shadow-lg">
+    <h2 class="text-2xl font-bold">Buttons</h2>
+    <div class='flex justify-around'>
+      <button class="btn btn-primary">Primary Button</button>
+      <button class="btn btn-secondary">Secondary Button</button>
+      <button
+        class="btn btn-secondary bg-orange-200 border-orange-200 text-slate-700"
+      >
+        Customized Button
+      </button>
+    </div>
+  </div>
+
+  <div class="card bg-white p-4 mb-4  shadow-lg">
+    <h2 class="text-2xl font-bold">Alerts</h2>
+    <div class="alert alert-success bg-green-200">Success!</div>
+    <div class="alert alert-error bg-red-200">Error!</div>
+  </div>
+
+  <div class="card bg-white p-4 mb-4 shadow-lg">
+    <h2 class="text-2xl font-bold">Forms</h2>
+    <div class="form-control">
+      <label for="name" class="label-text">Name</label>
+      <input type="text" name="name" class="input input-bordered" />
+    </div>
+  </div>
+
+  <div class="card bg-white p-4 mb-4 shadow-lg">
+    <h2 class="text-2xl font-bold">Cards</h2>
+    <div class="card p-4 bg-slate-900 text-white">
+      <a href="#" class="link-hover">
+        <h1 class="text-xl font-semibold">This is a post title</h1>
+      </a>
+      <p>This is an excerpt.</p>
+    </div>
+  </div>
+</div>
