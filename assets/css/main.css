@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .twitter-element {
+    @apply my-14;
+  }
+  .twitter-tweet {
+    @apply mx-auto;
+  }
+  .twitter-caption {
+    @apply max-w-screen-md text-base text-slate-500 mx-auto text-center italic;
+  }
+
+  .content {
+    h2, h3, h4 {
+      @apply font-title tracking-wider font-normal;
+    }
+  }
+}

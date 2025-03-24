@@ -1,6 +1,8 @@
+const tailwindMdBase = require('@geoffcodesthings/tailwind-md-base');
+
 module.exports = {
   content: [
-    './_drafts/**/*.html',
+    './_drafts/**/*.{html,md}',
     './_includes/**/*.html',
     './_layouts/**/*.html',
     './_posts/*.md',
@@ -13,12 +15,28 @@ module.exports = {
       'title': ['"Alfa Slab One"', 'ui-serif', 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
       'postBody': ['"Open Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"']
     },
+    markdownBase: {
+      wrapperClass: 'content',
+      h1: {
+        marginTop: '3rem',
+      },
+      h2: {
+        marginTop: '3rem',
+      },
+      h3: {
+        marginTop: '3rem',
+      },
+      h4: {
+        marginTop: '3rem',
+      }
+    },
     theme: {
       extend: {},
     },
   },
   plugins: [
     require('daisyui'),
+    tailwindMdBase(),
   ],
   daisyui: {
     themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
