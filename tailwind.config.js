@@ -1,5 +1,3 @@
-const tailwindMdBase = require('@geoffcodesthings/tailwind-md-base');
-
 module.exports = {
   content: [
     './_drafts/**/*.{html,md}',

@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
 
 @config '../../tailwind.config.js';
 
@@ -17,6 +19,12 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@layer utilities {
+  .oklch {
+    color: unset;
   }
 }
 
