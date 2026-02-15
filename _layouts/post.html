@@ -11,7 +11,14 @@ layout: base
     </div>
   </div>
   <h1 class='font-title text-4xl text-center'>{{ page.title }}</h1>
-  <p class='text-center'>{{page.author}} | {{ page.date | date: "%d/%b, %y" }}</p>
+  
+  {% if page.author && page.date %}
+    <p class='text-center'>{{page.author}} | {{ page.date | date: "%d/%b, %y" }}</p>
+  {% elsif page.author %}
+    <p class='text-center'>{{page.author}}</p>
+  {% elsif page.date %}
+    <p class='text-center'>{{ page.date | date: "%d/%b, %y" }}</p>
+  {% endif %}
 
   <article class='prose max-w-none lg:prose-xl'>
     {{ content }}
