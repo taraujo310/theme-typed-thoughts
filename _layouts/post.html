@@ -12,7 +12,7 @@ layout: base
   </div>
   <h1 class='font-title text-4xl text-center'>{{ page.title }}</h1>
   
-  {% if page.author && page.date %}
+  {% if page.author and page.date %}
     <p class='text-center'>{{page.author}} | {{ page.date | date: "%d/%b, %y" }}</p>
   {% elsif page.author %}
     <p class='text-center'>{{page.author}}</p>
